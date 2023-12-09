@@ -532,9 +532,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
+    .addedSingleWrapper{
+        width: 64%;
+        @include sm{
+            width: 100% !important;
+        }
+    }
     .woocommerce-product-gallery{
         float: none !important;
         width: 31% !important;
+        @include sm{
+            width: 100% !important;
+        }
         .flex-viewport{
             img{
                 border-radius: 5px !important;
@@ -563,6 +572,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     .entry-summary{
         float: none !important;
         width: 33% !important;
+        @include md{
+            width: 100% !important;
+        }
         h1{
             font-size: 20px;
             color: #444;
@@ -700,6 +712,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         margin-top: 60px;
         height: max-content;
         width: 33%;
+        @include md{
+            width: 100% !important;
+        }
         .tableViewInfo{
             display: flex;
             flex-wrap: wrap;
@@ -732,6 +747,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         display: grid !important;
         grid-template-columns: repeat(4,minmax(0,1fr));
         grid-gap: 15px;
+        @include md{
+            grid-template-columns: repeat(3,minmax(0,1fr));
+        }
+        @include sm{
+            grid-template-columns: repeat(2,minmax(0,1fr));
+        }
+        @include xs{
+            grid-gap: 10px;
+        }
     }
 }
 ul.products{
@@ -896,30 +920,62 @@ ul.products{
                 .customProductSortTitle{
                     color: #8a8a8a;
                     margin-left: 15px;
+                    @include xs{
+                        display: none;
+                    }
+                }
+                .customProductSortTitleMobile{
+                    display: none;
+                    margin-left: 0;
+                    cursor: pointer;
+                    @include xs{
+                        display: block;
+                    }
                 }
                 .customProductSortOptions{
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: flex-start;
                     align-items: center;
-                    @include xs{
-                        display: none;
-                    }
                     a{
                         color: #484848;
                         display: block;
                         padding: 5px 15px;
+                        @include xs{
+                            display: none;
+                        }
                     }
                     .activeProductSort{
                         background-color: #fdcf00;
                         color: #fff;
                         border-radius: 8px;
+                        @include xs{
+                            display: block;
+                        }
                     }
                 }
                 .customProductSortOptionsMobile{
                     display: none;
-                    @include xs{
+                    position: fixed;
+                    background: #fff;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    z-index: 9999;
+                    padding: 30px;                    
+                    a{
+                        @include xs{
+                            display: block;
+                            width: max-content;
+                        }
+                    }
+                    span{
                         display: block;
+                        font-size: 14px;
+                        color: #414141;
+                        font-weight: 600;
+                        margin-bottom: 30px;
                     }
                 }
             }

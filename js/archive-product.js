@@ -42,4 +42,12 @@ $(document).ready(function () {
             window.location.href = updatedUrl;
         }
     });
+    $('.customProductSort').click(function (e) {
+        if($(window).width() < 480){
+            e.preventDefault();
+            $('.customProductSortOptionsMobile').show(300);
+            $(this).unbind('click').click();
+        }
+        
+    });
 });

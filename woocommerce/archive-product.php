@@ -36,6 +36,7 @@ do_action( 'woocommerce_before_main_content' );
 	<div class="customProductSortWrapper">
 		<div class="customProductSort">
 			<div class="customProductSortTitle">مرتب سازی بر اساس:</div>
+			<div class="customProductSortTitle customProductSortTitleMobile"><svg width="24" height="24" viewBox="0 0 24 24" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg" class="icon flat-line"><path style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2" d="m10 15-4 4-4-4"/><path data-name="primary" d="M6 19V4m14 12h-5m5-5h-7m7-5H10" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2"/></svg></div>
 			<div class="customProductSortOptions">
 				<a class="<?php echo (isset($_GET['orderby'])) ? (''):('activeProductSort') ?>" href="<?php echo get_site_url(); ?>/shop/">جدیدترین</a>
 				<a class="<?php echo (isset($_GET['orderby']) && $_GET['orderby']=='popularity') ? ('activeProductSort'):('') ?>" href="<?php echo get_site_url(); ?>/shop/?orderby=popularity">محبوب‌ترین</a>
@@ -44,6 +45,7 @@ do_action( 'woocommerce_before_main_content' );
 				<a class="<?php echo (isset($_GET['orderby']) && $_GET['orderby']=='price-desc') ? ('activeProductSort'):('') ?>" href="<?php echo get_site_url(); ?>/shop/?orderby=price-desc">گران‌ترین</a>
 			</div>
 			<div class="customProductSortOptions customProductSortOptionsMobile">
+				<span>مرتب سازی بر اساس:</span>
 				<a class="<?php echo (isset($_GET['orderby'])) ? (''):('activeProductSort') ?>" href="<?php echo get_site_url(); ?>/shop/">جدیدترین</a>
 				<a class="<?php echo (isset($_GET['orderby']) && $_GET['orderby']=='popularity') ? ('activeProductSort'):('') ?>" href="<?php echo get_site_url(); ?>/shop/?orderby=popularity">محبوب‌ترین</a>
 				<a class="<?php echo (isset($_GET['orderby']) && $_GET['orderby']=='rating') ? ('activeProductSort'):('') ?>" href="<?php echo get_site_url(); ?>/shop/?orderby=rating">رتبه‌بندی</a>
