@@ -43,6 +43,13 @@ do_action( 'woocommerce_before_main_content' );
 				<a class="<?php echo (isset($_GET['orderby']) && $_GET['orderby']=='price') ? ('activeProductSort'):('') ?>" href="<?php echo get_site_url(); ?>/shop/?orderby=price">ارزان‌ترین</a>
 				<a class="<?php echo (isset($_GET['orderby']) && $_GET['orderby']=='price-desc') ? ('activeProductSort'):('') ?>" href="<?php echo get_site_url(); ?>/shop/?orderby=price-desc">گران‌ترین</a>
 			</div>
+			<div class="customProductSortOptions customProductSortOptionsMobile">
+				<a class="<?php echo (isset($_GET['orderby'])) ? (''):('activeProductSort') ?>" href="<?php echo get_site_url(); ?>/shop/">جدیدترین</a>
+				<a class="<?php echo (isset($_GET['orderby']) && $_GET['orderby']=='popularity') ? ('activeProductSort'):('') ?>" href="<?php echo get_site_url(); ?>/shop/?orderby=popularity">محبوب‌ترین</a>
+				<a class="<?php echo (isset($_GET['orderby']) && $_GET['orderby']=='rating') ? ('activeProductSort'):('') ?>" href="<?php echo get_site_url(); ?>/shop/?orderby=rating">رتبه‌بندی</a>
+				<a class="<?php echo (isset($_GET['orderby']) && $_GET['orderby']=='price') ? ('activeProductSort'):('') ?>" href="<?php echo get_site_url(); ?>/shop/?orderby=price">ارزان‌ترین</a>
+				<a class="<?php echo (isset($_GET['orderby']) && $_GET['orderby']=='price-desc') ? ('activeProductSort'):('') ?>" href="<?php echo get_site_url(); ?>/shop/?orderby=price-desc">گران‌ترین</a>
+			</div>
 		</div>
 		<div class="customProductStockSort">
 			<div class="customProductStockSortLabel">فقط موجودها:</div>
