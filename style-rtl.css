@@ -1662,7 +1662,7 @@ ul.products li.product .price ins {
 
 .headerMiniCartContainer {
   position: absolute;
-  background-color: #664949;
+  background-color: #ffffff;
   padding: 10px;
   z-index: 9999;
   top: 100%;
@@ -1671,4 +1671,15 @@ ul.products li.product .price ins {
   margin: auto;
   width: 250px;
   border-radius: 10px;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.09);
+}
+.headerMiniCartContainer ul {
+  padding: 0;
+  margin: 0;
+}
+.headerMiniCartContainer ul li {
+  padding: 0;
+}
+.headerMiniCartContainer ul li::before {
+  display: none;
 }/*# sourceMappingURL=style-rtl.css.map */

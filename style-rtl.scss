@@ -1114,7 +1114,7 @@ ul.products{
 
 .headerMiniCartContainer{
     position: absolute;
-    background-color: #664949;
+    background-color: #ffffff;
     padding: 10px;
     z-index: 9999;
     top: 100%;
@@ -1123,4 +1123,15 @@ ul.products{
     margin: auto;
     width: 250px;
     border-radius: 10px;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.09);
+    ul{
+        padding: 0;
+        margin: 0;
+        li{
+            padding: 0;
+            &::before{
+                display: none;
+            }
+        }
+    }
 }
